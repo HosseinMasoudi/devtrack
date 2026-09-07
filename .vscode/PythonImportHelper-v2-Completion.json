@@ -1,0 +1,148 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Project",
+        "importPath": "schema",
+        "description": "schema",
+        "isExtraImport": true,
+        "detail": "schema",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "create_project",
+        "kind": 2,
+        "importPath": "api.v1.project",
+        "description": "api.v1.project",
+        "peekOfCode": "def create_project(project: Project):\n    return {\"message\": \"Project created successfully\", \"project\": project.name}\n@app.get(\"/api/v1/projects\", status_code=status.HTTP_200_OK)\ndef read_projects():\n    return {\"message\": \"List of all projects would be fetched here.\"}\n@app.get(\"/api/v1/projects/{project_id}\", status_code=status.HTTP_200_OK)\ndef read_project(project_id: int):\n    return {\"project_id\": project_id, \"message\": \"Project details would be fetched here.\"}\n@app.put(\"/api/v1/projects/{project_id}\", status_code=status.HTTP_200_OK)\ndef update_project(project_id: int, project: Project):",
+        "detail": "api.v1.project",
+        "documentation": {}
+    },
+    {
+        "label": "read_projects",
+        "kind": 2,
+        "importPath": "api.v1.project",
+        "description": "api.v1.project",
+        "peekOfCode": "def read_projects():\n    return {\"message\": \"List of all projects would be fetched here.\"}\n@app.get(\"/api/v1/projects/{project_id}\", status_code=status.HTTP_200_OK)\ndef read_project(project_id: int):\n    return {\"project_id\": project_id, \"message\": \"Project details would be fetched here.\"}\n@app.put(\"/api/v1/projects/{project_id}\", status_code=status.HTTP_200_OK)\ndef update_project(project_id: int, project: Project):\n    return {\"project_id\": project_id, \"message\": \"Project updated successfully\", \"updated_project\": project.name}\n@app.delete(\"/api/v1/projects/{project_id}/true\", status_code=status.HTTP_204_NO_CONTENT)\ndef delete_project(project_id: int):",
+        "detail": "api.v1.project",
+        "documentation": {}
+    },
+    {
+        "label": "read_project",
+        "kind": 2,
+        "importPath": "api.v1.project",
+        "description": "api.v1.project",
+        "peekOfCode": "def read_project(project_id: int):\n    return {\"project_id\": project_id, \"message\": \"Project details would be fetched here.\"}\n@app.put(\"/api/v1/projects/{project_id}\", status_code=status.HTTP_200_OK)\ndef update_project(project_id: int, project: Project):\n    return {\"project_id\": project_id, \"message\": \"Project updated successfully\", \"updated_project\": project.name}\n@app.delete(\"/api/v1/projects/{project_id}/true\", status_code=status.HTTP_204_NO_CONTENT)\ndef delete_project(project_id: int):\n    return {\"project_id\": project_id, \"message\": \"Project deleted successfully\"}",
+        "detail": "api.v1.project",
+        "documentation": {}
+    },
+    {
+        "label": "update_project",
+        "kind": 2,
+        "importPath": "api.v1.project",
+        "description": "api.v1.project",
+        "peekOfCode": "def update_project(project_id: int, project: Project):\n    return {\"project_id\": project_id, \"message\": \"Project updated successfully\", \"updated_project\": project.name}\n@app.delete(\"/api/v1/projects/{project_id}/true\", status_code=status.HTTP_204_NO_CONTENT)\ndef delete_project(project_id: int):\n    return {\"project_id\": project_id, \"message\": \"Project deleted successfully\"}",
+        "detail": "api.v1.project",
+        "documentation": {}
+    },
+    {
+        "label": "delete_project",
+        "kind": 2,
+        "importPath": "api.v1.project",
+        "description": "api.v1.project",
+        "peekOfCode": "def delete_project(project_id: int):\n    return {\"project_id\": project_id, \"message\": \"Project deleted successfully\"}",
+        "detail": "api.v1.project",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "api.v1.project",
+        "description": "api.v1.project",
+        "peekOfCode": "app = FastAPI(description=\"DevTrack is a production-oriented project management backend built with FastAPI.\")\n@app.post(\"/api/v1/projects\", status_code=status.HTTP_201_CREATED)\ndef create_project(project: Project):\n    return {\"message\": \"Project created successfully\", \"project\": project.name}\n@app.get(\"/api/v1/projects\", status_code=status.HTTP_200_OK)\ndef read_projects():\n    return {\"message\": \"List of all projects would be fetched here.\"}\n@app.get(\"/api/v1/projects/{project_id}\", status_code=status.HTTP_200_OK)\ndef read_project(project_id: int):\n    return {\"project_id\": project_id, \"message\": \"Project details would be fetched here.\"}",
+        "detail": "api.v1.project",
+        "documentation": {}
+    },
+    {
+        "label": "read_root",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def read_root():\n    return {\"message\": \"Hello, FastAPI!\"}",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI(description=\"DevTrack is a production-oriented project management backend built with FastAPI.\")\n@app.get(\"/\")\ndef read_root():\n    return {\"message\": \"Hello, FastAPI!\"}",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Project",
+        "kind": 6,
+        "importPath": "schema",
+        "description": "schema",
+        "peekOfCode": "class Project(BaseModel):\n    id: int = Field(..., description=\"The unique identifier of the project\")\n    name: str = Field(..., description=\"The name of the project\")\n    description: str = Field(..., description=\"A brief description of the project\")\n    start_date: str = Field(..., description=\"The start date of the project in YYYY-MM-DD format\")\n    end_date: str = Field(..., description=\"The end date of the project in YYYY-MM-DD format\")\nclass Task(BaseModel):\n    id: int = Field(..., description=\"The unique identifier of the task\")\n    project_id: int = Field(..., description=\"The unique identifier of the project this task belongs to\")\n    name: str = Field(..., description=\"The name of the task\")",
+        "detail": "schema",
+        "documentation": {}
+    },
+    {
+        "label": "Task",
+        "kind": 6,
+        "importPath": "schema",
+        "description": "schema",
+        "peekOfCode": "class Task(BaseModel):\n    id: int = Field(..., description=\"The unique identifier of the task\")\n    project_id: int = Field(..., description=\"The unique identifier of the project this task belongs to\")\n    name: str = Field(..., description=\"The name of the task\")\n    description: str = Field(..., description=\"A brief description of the task\")\n    status: str = Field(..., description=\"The current status of the task (e.g., 'pending', 'in progress', 'completed')\")\n    priority: str = Field(..., description=\"The priority level of the task (e.g., 'low', 'medium', 'high', 'critical')\")\n    due_date: str = Field(..., description=\"The due date of the task in YYYY-MM-DD format\")\n    @field_validator(\"status\")\n    def validate_status(self, value):",
+        "detail": "schema",
+        "documentation": {}
+    }
+]
