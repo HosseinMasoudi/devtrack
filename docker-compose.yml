@@ -1,13 +1,13 @@
 services:
   postgres:
     image: postgres:17
-    container_name: my-postgres
+    container_name: my-postgresql
     restart: unless-stopped
 
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: myproject
+      POSTGRES_PASSWORD: asghar
+      POSTGRES_DB: devtrack
 
     ports:
       - "5432:5432"

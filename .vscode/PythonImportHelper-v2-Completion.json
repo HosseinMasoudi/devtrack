@@ -24,11 +24,78 @@
         "documentation": {}
     },
     {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Project",
         "importPath": "schema",
         "description": "schema",
         "isExtraImport": true,
         "detail": "schema",
+        "documentation": {}
+    },
+    {
+        "label": "Task",
+        "importPath": "schema",
+        "description": "schema",
+        "isExtraImport": true,
+        "detail": "schema",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "dotenv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "psycopg2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "psycopg2",
+        "description": "psycopg2",
+        "detail": "psycopg2",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -110,6 +177,60 @@
         "documentation": {}
     },
     {
+        "label": "create_task",
+        "kind": 2,
+        "importPath": "api.v1.tasks",
+        "description": "api.v1.tasks",
+        "peekOfCode": "def create_task(task: Task):\n    return {\"message\": \"Task created successfully\", \"task\": task.name}\n@app.get(\"/api/v1/tasks\", status_code=status.HTTP_200_OK)\ndef read_tasks():\n    return {\"message\": \"List of all tasks would be fetched here.\"}\n@app.get(\"/api/v1/tasks/{task_id}\", status_code=status.HTTP_200_OK)\ndef read_task(task_id: int):\n    return {\"task_id\": task_id, \"message\": \"Task details would be fetched here.\"}\n@app.put(\"/api/v1/tasks/{task_id}\", status_code=status.HTTP_200_OK)\ndef update_task(task_id: int, task: Task):",
+        "detail": "api.v1.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "read_tasks",
+        "kind": 2,
+        "importPath": "api.v1.tasks",
+        "description": "api.v1.tasks",
+        "peekOfCode": "def read_tasks():\n    return {\"message\": \"List of all tasks would be fetched here.\"}\n@app.get(\"/api/v1/tasks/{task_id}\", status_code=status.HTTP_200_OK)\ndef read_task(task_id: int):\n    return {\"task_id\": task_id, \"message\": \"Task details would be fetched here.\"}\n@app.put(\"/api/v1/tasks/{task_id}\", status_code=status.HTTP_200_OK)\ndef update_task(task_id: int, task: Task):\n    return {\"task_id\": task_id, \"message\": \"Task updated successfully\", \"updated_task\": task.name}\n@app.delete(\"/api/v1/tasks/{task_id}/true\", status_code=status.HTTP_204_NO_CONTENT)\ndef delete_task(task_id: int):",
+        "detail": "api.v1.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "read_task",
+        "kind": 2,
+        "importPath": "api.v1.tasks",
+        "description": "api.v1.tasks",
+        "peekOfCode": "def read_task(task_id: int):\n    return {\"task_id\": task_id, \"message\": \"Task details would be fetched here.\"}\n@app.put(\"/api/v1/tasks/{task_id}\", status_code=status.HTTP_200_OK)\ndef update_task(task_id: int, task: Task):\n    return {\"task_id\": task_id, \"message\": \"Task updated successfully\", \"updated_task\": task.name}\n@app.delete(\"/api/v1/tasks/{task_id}/true\", status_code=status.HTTP_204_NO_CONTENT)\ndef delete_task(task_id: int):\n    return {\"task_id\": task_id, \"message\": \"Task deleted successfully\"}",
+        "detail": "api.v1.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "update_task",
+        "kind": 2,
+        "importPath": "api.v1.tasks",
+        "description": "api.v1.tasks",
+        "peekOfCode": "def update_task(task_id: int, task: Task):\n    return {\"task_id\": task_id, \"message\": \"Task updated successfully\", \"updated_task\": task.name}\n@app.delete(\"/api/v1/tasks/{task_id}/true\", status_code=status.HTTP_204_NO_CONTENT)\ndef delete_task(task_id: int):\n    return {\"task_id\": task_id, \"message\": \"Task deleted successfully\"}",
+        "detail": "api.v1.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "delete_task",
+        "kind": 2,
+        "importPath": "api.v1.tasks",
+        "description": "api.v1.tasks",
+        "peekOfCode": "def delete_task(task_id: int):\n    return {\"task_id\": task_id, \"message\": \"Task deleted successfully\"}",
+        "detail": "api.v1.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "api.v1.tasks",
+        "description": "api.v1.tasks",
+        "peekOfCode": "app = FastAPI(description=\"DevTrack is a production-oriented project management backend built with FastAPI.\")\n@app.post(\"/api/v1/tasks\", status_code=status.HTTP_201_CREATED)\ndef create_task(task: Task):\n    return {\"message\": \"Task created successfully\", \"task\": task.name}\n@app.get(\"/api/v1/tasks\", status_code=status.HTTP_200_OK)\ndef read_tasks():\n    return {\"message\": \"List of all tasks would be fetched here.\"}\n@app.get(\"/api/v1/tasks/{task_id}\", status_code=status.HTTP_200_OK)\ndef read_task(task_id: int):\n    return {\"task_id\": task_id, \"message\": \"Task details would be fetched here.\"}",
+        "detail": "api.v1.tasks",
+        "documentation": {}
+    },
+    {
         "label": "read_root",
         "kind": 2,
         "importPath": "main",
@@ -132,7 +253,25 @@
         "kind": 6,
         "importPath": "schema",
         "description": "schema",
-        "peekOfCode": "class Project(BaseModel):\n    id: int = Field(..., description=\"The unique identifier of the project\")\n    name: str = Field(..., description=\"The name of the project\")\n    description: str = Field(..., description=\"A brief description of the project\")\n    start_date: str = Field(..., description=\"The start date of the project in YYYY-MM-DD format\")\n    end_date: str = Field(..., description=\"The end date of the project in YYYY-MM-DD format\")\nclass Task(BaseModel):\n    id: int = Field(..., description=\"The unique identifier of the task\")\n    project_id: int = Field(..., description=\"The unique identifier of the project this task belongs to\")\n    name: str = Field(..., description=\"The name of the task\")",
+        "peekOfCode": "class Project(BaseModel):\n    id: int = Field(..., description=\"The unique identifier of the project\")\n    name: str = Field(..., description=\"The name of the project\")\n    description: str = Field(..., description=\"A brief description of the project\")\n    start_date: datetime = Field(..., default_factory=datetime.now, description=\"The start date of the project in YYYY-MM-DD format\")\n    end_date: datetime = Field(description=\"The end date of the project in YYYY-MM-DD format\")\nclass TaskStatus(str, Enum):\n    ACTIVE = \"active\"\n    COMPLETED = \"completed\"\n    IN_PROGRESS = \"in_progress\"",
+        "detail": "schema",
+        "documentation": {}
+    },
+    {
+        "label": "TaskStatus",
+        "kind": 6,
+        "importPath": "schema",
+        "description": "schema",
+        "peekOfCode": "class TaskStatus(str, Enum):\n    ACTIVE = \"active\"\n    COMPLETED = \"completed\"\n    IN_PROGRESS = \"in_progress\"\nclass TaskPriority(str, Enum):\n    LOW = \"low\"\n    MEDIUM = \"medium\"\n    HIGH = \"high\"\n    CRITICAL = \"critical\"\nclass Task(BaseModel):",
+        "detail": "schema",
+        "documentation": {}
+    },
+    {
+        "label": "TaskPriority",
+        "kind": 6,
+        "importPath": "schema",
+        "description": "schema",
+        "peekOfCode": "class TaskPriority(str, Enum):\n    LOW = \"low\"\n    MEDIUM = \"medium\"\n    HIGH = \"high\"\n    CRITICAL = \"critical\"\nclass Task(BaseModel):\n    id: int = Field(..., description=\"The unique identifier of the task\")\n    project_id: int = Field(..., description=\"The unique identifier of the project this task belongs to\")\n    name: str = Field(..., description=\"The name of the task\")\n    description: str = Field(..., description=\"A brief description of the task\")",
         "detail": "schema",
         "documentation": {}
     },
@@ -141,7 +280,7 @@
         "kind": 6,
         "importPath": "schema",
         "description": "schema",
-        "peekOfCode": "class Task(BaseModel):\n    id: int = Field(..., description=\"The unique identifier of the task\")\n    project_id: int = Field(..., description=\"The unique identifier of the project this task belongs to\")\n    name: str = Field(..., description=\"The name of the task\")\n    description: str = Field(..., description=\"A brief description of the task\")\n    status: str = Field(..., description=\"The current status of the task (e.g., 'pending', 'in progress', 'completed')\")\n    priority: str = Field(..., description=\"The priority level of the task (e.g., 'low', 'medium', 'high', 'critical')\")\n    due_date: str = Field(..., description=\"The due date of the task in YYYY-MM-DD format\")\n    @field_validator(\"status\")\n    def validate_status(self, value):",
+        "peekOfCode": "class Task(BaseModel):\n    id: int = Field(..., description=\"The unique identifier of the task\")\n    project_id: int = Field(..., description=\"The unique identifier of the project this task belongs to\")\n    name: str = Field(..., description=\"The name of the task\")\n    description: str = Field(..., description=\"A brief description of the task\")\n    status: TaskStatus = Field(..., description=\"The current status of the task\")\n    priority: TaskPriority = Field(..., description=\"The priority level of the task\")\n    due_date: datetime = Field(..., description=\"The due date of the task in YYYY-MM-DD format\")\n    @field_validator(\"status\")\n    def validate_status(self, value):",
         "detail": "schema",
         "documentation": {}
     }
