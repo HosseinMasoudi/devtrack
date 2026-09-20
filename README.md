@@ -269,8 +269,9 @@ FastAPI + Pydantic
 CRUD API
 ```
 
+---
 
-# PostgreSQL Queries
+## PostgreSQL Queries
 
 This README contains the PostgreSQL commands needed to create and test the database for the **Project Management API**.
 

@@ -1,5 +1,5 @@
 from fastapi import FastAPI, status
-from schema import Project
+from core.schema import Project
 
 app = FastAPI(description="DevTrack is a production-oriented project management backend built with FastAPI.")
 
